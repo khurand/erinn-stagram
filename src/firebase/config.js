@@ -20,7 +20,5 @@
   const projectStorage = firebase.storage();
   // Utiliser la database de firebase
   const projectFirestore = firebase.firestore();
-  // Création d'un champ timestamp server pour la db et retourne une fonction timestamp()
-  const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-  export { projectStorage, projectFirestore, timestamp };
+  export { projectStorage, projectFirestore };

@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {projectStorage, projectFirestore, timestamp} from '../firebase/config'
+import {projectStorage, projectFirestore} from '../firebase/config'
 
 const useStorage = (file, tags, opt) => {
     const [progress, setProgress] = useState(0);
@@ -27,7 +27,7 @@ const useStorage = (file, tags, opt) => {
         async () => {
             const url = await storageRef.getDownloadURL();
             // Quand on a l'url du fichier, on crée un document dans la collection contenant l'url, les tags, les options et le timestamp dans la db
-            const createdAt = timestamp();
+            const createdAt = new Date();
             collectionRef.add({url, createdAt, tags, opt})
             setUrl(url);
         });

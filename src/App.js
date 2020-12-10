@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <h1>Home Page</h1>
       <AddContentButton />
-      <ImageGrid  setSelectedImg={setSelectedImg}/>
+      <ImageGrid setSelectedImg={setSelectedImg}/>
       {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}
     </div>
   );
