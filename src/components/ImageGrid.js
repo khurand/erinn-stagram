@@ -21,19 +21,19 @@ const ImageGrid = ({setSelectedImg}) => {
           <motion.div className="img-wrap" layout>
             <header className="img-header">
               img-header
+              <div className="overlay-menu" onClick={toggleMenu}>
+                <i className="fas fa-ellipsis-v">
+                  {openMenu && <ThreeDotsMenu />}
+                </i>
+              </div>
             </header>
-            <div className="overlay-menu" onClick={toggleMenu}>
-              <i className="fas fa-ellipsis-v">
-                {openMenu && <ThreeDotsMenu />}
-              </i>
-            </div>
             <motion.img src={doc.url} alt="db-firebase-data-images" whileHover={{opacity: 1}} initial={{opacity:0}} animate={{opacity:1}} transition={{delay: 1}} onClick={()=> setSelectedImg(doc.url)}/>            
+            <div className="text">
+              <p>{doc.tags && 'tags: #'+ doc.tags}</p>
+              <p>opt: {doc.opt}</p>
+              <p>crée le : {moment(doc.createdAt.toDate().toString()).calendar()}</p>
+            </div>
           </motion.div>
-          <div className="text">
-             <p>{doc.tags && 'tags: #'+ doc.tags}</p>
-             <p>opt: {doc.opt}</p>
-             <p>crée le : {moment(doc.createdAt.toDate().toString()).calendar()}</p>
-          </div>
         </div>
       ))}
     </div>

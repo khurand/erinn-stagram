@@ -10,7 +10,7 @@ const AddContentButton = () => {
 
   return (
     <>
-      <button onClick={handleClick}>Ajouter</button>
+      <button onClick={handleClick} className="add-content">Ajouter</button>
       {openMenu && <UploadForm />}
     </>
   )

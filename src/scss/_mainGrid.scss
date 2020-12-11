@@ -1,0 +1,18 @@
+.img-grid {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-gap: 20px;
+
+  .picture img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+.img-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

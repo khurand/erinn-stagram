@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import AddContentButton from './components/AddContentButton';
 import ImageGrid from './components/ImageGrid';
 import Modal from './components/Modal';
-import './index.css';
+import './scss/app.scss';
 
 
 function App() {
@@ -11,9 +11,11 @@ function App() {
   return (
     <div className="App">
       <h1>Home Page</h1>
-      <AddContentButton />
-      <ImageGrid setSelectedImg={setSelectedImg}/>
-      {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}
+      <div className="container">
+        <AddContentButton />
+        <ImageGrid setSelectedImg={setSelectedImg}/>
+        {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+
+  .output {
+    height: 60px;
+    font-size: 0.8rem;
+
+    .error {
+      color: var(--error);
+    }
+  }
+}

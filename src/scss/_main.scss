@@ -1,0 +1,14 @@
+body {
+  font-family: 'Noto Serif';
+  color: $secondary;
+  background-color: #eee;
+
+  .App {
+    max-width: 960px;
+    margin: 0 auto;
+
+    .container {
+      padding: 0 50px;
+    }
+  }
+}
