@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+body {
+  font-family: 'Noto Serif';
+  color: #4e4e4e;
+  background-color: #eee;
+}
+
+body .App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body .App .container {
+  padding: 0 50px;
+}
+
+.add-content {
+  margin-bottom: 20px;
+}
+
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+
+form .output {
+  height: 60px;
+  font-size: 0.8rem;
+}
+
+form .output .error {
+  color: var(--error);
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-gap: 20px;
+}
+
+.img-grid .picture img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.img-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-bar {
+  height: 5px;
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+}
+/*# sourceMappingURL=app.css.map */

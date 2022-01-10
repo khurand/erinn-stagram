@@ -9,10 +9,10 @@
     "firebase": "^8.1.2",
     "framer-motion": "^2.9.5",
     "moment": "^2.29.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0"
+    "react-scripts": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
