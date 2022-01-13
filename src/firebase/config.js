@@ -1,7 +1,8 @@
-  import firebase from 'firebase/app';
-  import 'firebase/storage';
-  import 'firebase/firestore';
+  import firebase from 'firebase/app'
+  import 'firebase/storage'
+  import 'firebase/firestore'
   
+  // Config Firebase de l'app
   var firebaseConfig = {
     apiKey: "AIzaSyDh1q0-nlpBQCPVZHc7ZbCjggEsEDLaomQ",
     authDomain: "erinn-stagram-a20f7.firebaseapp.com",
@@ -13,12 +14,12 @@
   };
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig)
   // firebase.analytics();
 
   // Utiliser le storage de firebase
-  const projectStorage = firebase.storage();
+  const projectStorage = firebase.storage()
   // Utiliser la database de firebase
-  const projectFirestore = firebase.firestore();
+  const projectFirestore = firebase.firestore()
 
-  export { projectStorage, projectFirestore };
+  export { projectStorage, projectFirestore }

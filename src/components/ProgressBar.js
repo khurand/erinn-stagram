@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import useStorage from '../hooks/useStorage'
 import { motion } from 'framer-motion'
 
-const ProgressBar = ({ file, setFile, tags, opt, clear}) => {
+const ProgressBar = ({ file, setFile, tags, clear}) => {
 
-    // File pour initialiser la progress-bar, setFile pour la repasser à null et la faire disparaître. Les props tags et opt sont passées au hook useStorage également.
-    const { url, progress } = useStorage(file, tags, opt);
+    // File pour initialiser la progress-bar, setFile pour la repasser à null et la faire disparaître. La prop "tags" est passée au hook useStorage également.
+    const { url, progress } = useStorage(file, tags);
+
+    console.log(progress, url)
 
     // Cache la progressbar quand l'upload est terminé et qu'on reçoit l'url venant de firebase
     useEffect(()=>{

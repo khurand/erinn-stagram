@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Home Page</h1>
+      <h1>Erinngram</h1>
       <div className="container">
         <AddContentButton />
         <ImageGrid setSelectedImg={setSelectedImg}/>
