@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import AddContentButton from './components/AddContentButton';
-import ImageGrid from './components/ImageGrid';
-import Modal from './components/Modal';
-import './scss/app.scss';
+import AddContentButton from './components/AddContentButton'
+import ImageGrid from './components/ImageGrid'
+import Modal from './components/Modal'
+// import './scss/app.scss'
+import './index.css'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Erinngram</h1>
+      <h1>Erinn Gram</h1>
       <div className="container">
         <AddContentButton />
         <ImageGrid setSelectedImg={setSelectedImg}/>

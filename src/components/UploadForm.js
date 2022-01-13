@@ -50,19 +50,23 @@ const UploadForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} id='form'>
-            <input type="file" onChange={handleAddPhoto} accept="image/png, image/jpeg"/>
-            <label htmlFor="tags">tags</label> 
-            <input type="text" name="tags" id="tags" onChange={handleAddTags}></input>
-            <button type="submit">Envoyer</button> 
+        <>
+            <form onSubmit={handleSubmit} id='form'>
+                <input type="file" onChange={handleAddPhoto} accept="image/png, image/jpeg"/>
+                <div className='tags'>
+                    <label htmlFor="tags">tags</label> 
+                    <input type="text" name="tags" id="tags" onChange={handleAddTags}></input>
+                </div>
+                <button type="submit">Envoyer</button> 
+            </form>
             <div className="output">
                 {error && <div className="error">{error}</div>}
-                {file && <div>{file.name}</div>}
+                {/* {file && <div>{file.name}</div>} */}
                 {file && 
                     <ProgressBar clear={clear} file={file} setFile={setFile} tags={tags} />
                 }
             </div>
-        </form>
+        </>
     )
 }
 
